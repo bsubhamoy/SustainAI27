@@ -1,11 +1,21 @@
-# Sust@inAI 27 — Conference Website
+# Sust@inAI 27 — Next.js Conference Website
 
-International Conference on Sustainable Artificial Intelligence and Green Computing
+International Conference on Sustainable Artificial Intelligence and Green Computing.
 
-**Conference:** 20–22 April 2027  
-**Venue:** Sydney, Australia  
-**Organizer:** Institute of Engineering & Management
+- **Conference:** 20–22 April 2027
+- **Venue:** Sydney, Australia
+- **Organizer:** Institute of Engineering & Management
 
-Static multi-page website. Routine conference-date edits are centralized in `assets/config.js`.
+## Next.js / Vercel
 
-Netlify publish directory: repository root (`.`); no build command required.
+This repository has been converted from the original static HTML structure to a **Next.js App Router** project. Vercel should detect Next.js automatically.
+
+- Framework preset: **Next.js**
+- Root directory: repository root
+- Build command: `next build`
+- Output: `.next`
+- Start command: `next start`
+
+Routine event details are centralized in `lib/config.js`.
+
+Routes include `/`, `/tracks`, `/about`, `/keynote`, `/speakers`, `/committee`, `/dates`, `/registration`, `/venue`, `/sponsors`, and `/contact`.
