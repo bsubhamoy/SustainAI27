@@ -1,0 +1,6 @@
+function countdown(){const t=new Date("2027-04-20T09:00:00+10:00").getTime(),n=Date.now(),d=Math.max(0,t-n);document.querySelectorAll("[data-d]").forEach(e=>e.textContent=String(Math.floor(d/86400000)).padStart(3,"0"));document.querySelectorAll("[data-h]").forEach(e=>e.textContent=String(Math.floor(d%86400000/3600000)).padStart(2,"0"));document.querySelectorAll("[data-m]").forEach(e=>e.textContent=String(Math.floor(d%3600000/60000)).padStart(2,"0"));document.querySelectorAll("[data-s]").forEach(e=>e.textContent=String(Math.floor(d%60000/1000)).padStart(2,"0"))}countdown();setInterval(countdown,1000);
+const menu=document.querySelector(".menu");if(menu)menu.onclick=()=>document.querySelector(".navlinks").classList.toggle("open");
+document.querySelectorAll(".navlinks a").forEach(a=>a.addEventListener("click",()=>document.querySelector(".navlinks").classList.remove("open")));
+function openModal(title,text){document.querySelector("#modalTitle").textContent=title;document.querySelector("#modalText").textContent=text;document.querySelector("#modal").classList.add("show")}
+function closeModal(){document.querySelector("#modal").classList.remove("show")}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
