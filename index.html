@@ -1,0 +1,191 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Home | Sust@inAI 27</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/style.css">
+<style>
+/* INDEX PAGE ONLY — introduction panel */
+.intro-home{
+  padding:56px 0 72px;
+  background:
+    radial-gradient(circle at 12% 45%, rgba(116,226,124,.24), transparent 27%),
+    radial-gradient(circle at 86% 20%, rgba(67,201,255,.20), transparent 28%),
+    linear-gradient(135deg,#e8f8ee 0%,#eefaf7 46%,#e8f5fb 100%);
+  position:relative;
+  overflow:hidden;
+}
+.intro-home:before{
+  content:"";
+  position:absolute;
+  width:330px;height:330px;
+  left:-150px;top:-130px;
+  border-radius:50%;
+  background:rgba(99,239,199,.18);
+  filter:blur(3px);
+}
+.intro-home:after{
+  content:"";
+  position:absolute;
+  width:280px;height:280px;
+  right:-110px;bottom:-130px;
+  border-radius:50%;
+  background:rgba(80,191,255,.13);
+  filter:blur(2px);
+}
+.intro-panel{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:42px;
+  align-items:center;
+  padding:38px 44px;
+  border:1px solid rgba(74,153,139,.18);
+  border-radius:28px;
+  background:rgba(255,255,255,.60);
+  box-shadow:0 22px 55px rgba(8,56,60,.10);
+  backdrop-filter:blur(10px);
+}
+.intro-logo-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:220px;
+  border-right:1px solid rgba(38,120,111,.13);
+}
+.intro-logo{
+  width:160px;
+  height:160px;
+  filter:drop-shadow(0 14px 25px rgba(26,123,117,.20));
+  animation:introLogoFloat 4.5s ease-in-out infinite;
+}
+.intro-logo-caption{
+  margin-top:10px;
+  font:700 15px "Space Grotesk";
+  letter-spacing:.02em;
+  color:#08776f;
+}
+@keyframes introLogoFloat{
+  0%,100%{transform:translateY(0) rotate(-1deg)}
+  50%{transform:translateY(-8px) rotate(2deg)}
+}
+.intro-copy{text-align:left}
+.intro-copy h2{font:700 clamp(31px,4vw,48px)/1.05 "Space Grotesk";letter-spacing:-.04em;margin:8px 0 16px;color:#071f2a}
+.intro-copy p{color:#4e6570;font-size:16px;margin:8px 0;max-width:820px}
+.intro-copy .question{
+  display:inline-block;
+  margin-top:17px;
+  padding:12px 17px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#07343b,#0c756d);
+  color:#e8ffb5;
+  font:700 17px "Space Grotesk";
+  box-shadow:0 10px 24px rgba(8,83,78,.15);
+}
+@media(max-width:760px){
+  .intro-panel{grid-template-columns:1fr;gap:18px;padding:30px 22px}
+  .intro-logo-wrap{border-right:0;border-bottom:1px solid rgba(38,120,111,.13);padding-bottom:18px;min-height:auto}
+  .intro-logo{width:125px;height:125px}
+  .intro-copy{text-align:center}
+  .intro-copy p{margin-left:auto;margin-right:auto}
+}
+</style>
+
+
+<style>
+/* FINAL HOME PAGE — visual treatment based on the approved reference */
+.final-hero{min-height:100vh;position:relative;overflow:hidden;background:#031b28;color:#fff;padding-top:74px}
+.final-bg{position:absolute;inset:-5%;background-image:linear-gradient(180deg,rgba(2,19,28,.10),rgba(2,19,28,.12)),url("assets/sustain-ai-background.png");background-size:cover;background-position:center;animation:finalBgMove 18s ease-in-out infinite alternate;filter:saturate(1.25) contrast(1.04)}
+@keyframes finalBgMove{0%{transform:scale(1.04);background-position:48% 50%}50%{transform:scale(1.10);background-position:53% 47%}100%{transform:scale(1.06);background-position:49% 53%}}
+.final-bg:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 32%,rgba(121,255,210,.20),transparent 25%),linear-gradient(90deg,rgba(0,22,31,.20),transparent 38%,rgba(0,20,28,.18));animation:finalAura 7s ease-in-out infinite alternate}
+@keyframes finalAura{to{opacity:.62;transform:scale(1.05)}}
+.final-glow{position:absolute;border-radius:50%;filter:blur(55px);pointer-events:none}.glow-a{width:300px;height:300px;left:8%;top:36%;background:rgba(78,255,185,.18);animation:glowMove 8s ease-in-out infinite alternate}.glow-b{width:350px;height:350px;right:5%;top:18%;background:rgba(52,195,255,.17);animation:glowMove 10s ease-in-out infinite alternate-reverse}@keyframes glowMove{to{transform:translate(35px,-22px) scale(1.15)}}
+.final-particles{position:absolute;inset:0;opacity:.23;background-image:radial-gradient(circle,rgba(231,255,222,.9) 0 1px,transparent 2px);background-size:92px 92px;animation:particleDrift 13s linear infinite}@keyframes particleDrift{to{background-position:92px 92px}}
+.final-circuit{position:absolute;inset:0;pointer-events:none;overflow:hidden}.ftrace{position:absolute;height:3px;border-radius:100px;background:linear-gradient(90deg,transparent,#64ffd4,#d7ff72,transparent);filter:drop-shadow(0 0 8px #60f5cf);opacity:.75;animation:traceMove 5s linear infinite}.ftrace.t1{width:31%;left:-8%;top:47%}.ftrace.t2{width:27%;left:60%;top:38%;animation-delay:-1.8s}.ftrace.t3{width:35%;left:40%;top:74%;animation-delay:-3s}.ftrace.t4{width:24%;left:73%;top:57%;animation-delay:-.8s}.ftrace.t5{width:22%;left:23%;top:30%;animation-delay:-2.5s}@keyframes traceMove{0%{transform:translateX(-30%);opacity:0}22%{opacity:.85}75%{opacity:.8}100%{transform:translateX(150%);opacity:0}}
+.fleaf{position:absolute;width:15px;height:27px;border-radius:100% 0 100% 0;background:linear-gradient(135deg,#e1ff70,#49d49a);filter:drop-shadow(0 0 10px rgba(216,255,111,.85));animation:leafFloat 4.6s ease-in-out infinite}.fleaf.fl1{left:11%;top:16%}.fleaf.fl2{left:27%;top:28%;animation-delay:-1s}.fleaf.fl3{left:67%;top:16%;animation-delay:-2s}.fleaf.fl4{left:82%;top:34%;animation-delay:-3s}.fleaf.fl5{left:92%;top:61%;animation-delay:-1.7s}.fleaf.fl6{left:57%;top:72%;animation-delay:-2.8s}@keyframes leafFloat{50%{transform:translateY(-16px) rotate(22deg) scale(1.18)}}
+.final-wrap{position:relative;z-index:3;padding:42px 0 30px}
+.final-title{text-align:center;text-shadow:0 5px 25px rgba(0,0,0,.26)}.final-kicker{font-size:11px;font-weight:800;letter-spacing:.2em;color:#dcffe5}.final-title h1{font:700 clamp(55px,7vw,92px)/.9 "Space Grotesk";letter-spacing:-.065em;margin:14px 0 12px}.final-title h1 span{background:linear-gradient(90deg,#d8ff70,#54efc4,#3ebdff);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% auto;animation:titleShimmer 5s linear infinite}.final-title h1 b{color:#48c9ff;font-size:.76em}@keyframes titleShimmer{to{background-position:200% center}}
+.final-title h2{font:700 clamp(18px,2.2vw,29px)/1.08 "Space Grotesk";letter-spacing:-.025em;margin:0;color:#f4fbfa}.theme-ribbon{width:max-content;max-width:90%;margin:14px auto 9px;padding:5px 36px;border-radius:3px;background:linear-gradient(90deg,transparent,#68d789,#d7ff74,#68d789,transparent);color:#06352f;font:800 14px "DM Sans";letter-spacing:.12em}
+.final-meta{display:flex;justify-content:center;align-items:center;gap:20px;font-size:16px;color:#f0fbf9}.final-meta i{height:22px;width:1px;background:rgba(255,255,255,.55)}.final-meta strong{font-weight:800}
+.final-info{margin:30px auto 18px;width:min(1100px,100%);display:grid;grid-template-columns:1.55fr .85fr;gap:0;border:1px solid rgba(255,255,255,.33);border-radius:27px;overflow:hidden;background:rgba(236,255,244,.82);box-shadow:0 25px 80px rgba(0,25,31,.30);backdrop-filter:blur(13px)}
+.final-intro{display:grid;grid-template-columns:235px 1fr;align-items:center;padding:28px 30px;color:#09252d}.intro-logo-final{height:100%;min-height:220px;display:grid;place-items:center;border-right:1px solid rgba(8,75,72,.18);padding-right:25px}.intro-logo-final img{width:185px;height:245px;object-fit:contain;filter:drop-shadow(0 12px 20px rgba(14,98,83,.18));animation:finalLogoFloat 4.5s ease-in-out infinite}@keyframes finalLogoFloat{50%{transform:translateY(-7px) rotate(1.5deg)}}
+.intro-text-final{padding-left:28px}.final-section-label{font-size:10px;font-weight:900;letter-spacing:.16em;color:#278c83}.intro-text-final h3{font:700 28px/1.05 "Space Grotesk";margin:7px 0 11px;color:#083b39}.intro-text-final p{font-size:13.5px;line-height:1.48;margin:8px 0;color:#254d55}.final-countdown{padding:25px 24px;background:rgba(4,42,49,.78);display:flex;flex-direction:column;justify-content:center}.count-label{font:800 13px "Space Grotesk";color:#8effd2;letter-spacing:.03em;margin-bottom:13px}.final-count{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.final-count>div{padding:13px 4px 11px;border-radius:12px;text-align:center;background:linear-gradient(145deg,rgba(100,219,94,.93),rgba(5,144,111,.95));box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}.final-count>div:nth-child(2){background:linear-gradient(145deg,#168d65,#058f91)}.final-count>div:nth-child(3){background:linear-gradient(145deg,#0a9188,#0879ad)}.final-count>div:nth-child(4){background:linear-gradient(145deg,#0874a9,#174c9a)}.final-count b{display:block;font:800 27px/1 "Space Grotesk";color:#fff}.final-count span{font-size:9px;text-transform:uppercase;letter-spacing:.07em;color:#e7fffa}.final-orgs{display:flex;align-items:center;justify-content:center;gap:15px;margin-top:20px}.final-orgs img{background:#fff;border-radius:8px;object-fit:contain}.final-orgs img:first-child{width:130px;height:70px;padding:4px}.final-orgs img:last-child{width:145px;height:61px;padding:4px}.final-orgs span{width:1px;height:54px;background:rgba(255,255,255,.30)}
+.final-actions{width:min(1100px,100%);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.final-tile{min-height:112px;border-radius:21px;padding:16px 18px;display:grid;grid-template-columns:52px 1fr 22px;align-items:center;gap:13px;color:#fff;border:1px solid rgba(255,255,255,.38);box-shadow:0 15px 35px rgba(0,25,30,.23);transition:.25s;backdrop-filter:blur(9px)}.final-tile:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 23px 50px rgba(0,25,30,.30)}.final-tile.green{background:linear-gradient(135deg,rgba(27,139,73,.92),rgba(12,92,71,.86))}.final-tile.blue{background:linear-gradient(135deg,rgba(11,103,194,.94),rgba(15,66,157,.90))}.final-tile.cyan{background:linear-gradient(135deg,rgba(12,145,151,.94),rgba(7,83,124,.92))}.tile-icon{width:50px;height:50px;border:2px solid rgba(216,255,168,.75);border-radius:50%;display:grid;place-items:center;font-size:23px;color:#eaffbd}.final-tile b{display:block;font:800 27px/1 "Space Grotesk";color:#e6ff92}.final-tile strong{display:block;font:700 16px/1.15 "Space Grotesk";margin-top:4px}.final-tile small{display:block;color:#d2e7e7;font-size:10px;margin-top:4px}.final-tile em{font-style:normal;font-size:34px;color:#e6ffb1}.final-tile .date-tile{font-size:16px;color:#fff}.final-tagline{width:min(760px,90%);margin:20px auto 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:13px;text-align:center;color:#d5f7e9}.final-tagline span{height:1px;background:linear-gradient(90deg,transparent,#8ef2c5)}.final-tagline span:nth-child(3){background:linear-gradient(90deg,#8ef2c5,transparent)}.final-tagline b{display:none}.final-tagline small{grid-column:1/-1;font-size:10px;letter-spacing:.22em;color:#d9f4ed;margin-top:-3px}
+@media(max-width:900px){.final-info{grid-template-columns:1fr}.final-countdown{padding:22px 28px}.final-actions{grid-template-columns:1fr}.final-wrap{padding-top:28px}.final-title h1{font-size:60px}}
+@media(max-width:650px){.final-title h2 br{display:none}.final-meta{gap:9px;font-size:12px;flex-wrap:wrap}.final-meta i{display:none}.theme-ribbon{padding:5px 18px;font-size:11px}.final-intro{grid-template-columns:1fr;padding:23px}.intro-logo-final{border-right:0;border-bottom:1px solid rgba(8,75,72,.18);min-height:150px;padding:0 0 15px}.intro-logo-final img{width:125px;height:155px}.intro-text-final{padding:18px 0 0}.intro-text-final h3{font-size:24px}.final-count b{font-size:21px}.final-orgs img:first-child{width:105px;height:60px}.final-orgs img:last-child{width:120px;height:53px}.final-tile{min-height:96px}.final-kicker{font-size:9px;letter-spacing:.13em}}
+</style>
+
+</head><body><header class="navbar"><div class="container nav">
+<a class="brand" href="index.html"><img src="assets/sustainai-logo.svg"><span class="brand-name">Sust<span>@inAI</span> 27<small>International Conference • Sydney 2027</small></span></a>
+<button class="menu">Menu</button><nav class="navlinks">
+<a href="index.html">Home</a><a href="tracks.html">Call for Papers & Tracks</a><a href="keynote.html">Keynote</a><a href="speakers.html">Speakers</a><a href="committee.html">Committee</a><a href="dates.html">Important Dates</a><a href="registration.html">Registration</a><a href="venue.html">Venue</a><a href="sponsors.html">Sponsors</a><a class="cta" href="contact.html">Contact</a></nav>
+</div></header><main>
+<section class="final-hero" id="home">
+  <div class="final-bg"></div>
+  <div class="final-glow glow-a"></div>
+  <div class="final-glow glow-b"></div>
+  <div class="final-particles"></div>
+
+  <!-- Animated circuit / leaf overlay -->
+  <div class="final-circuit" aria-hidden="true">
+    <span class="ftrace t1"></span><span class="ftrace t2"></span><span class="ftrace t3"></span>
+    <span class="ftrace t4"></span><span class="ftrace t5"></span>
+    <span class="fleaf fl1"></span><span class="fleaf fl2"></span><span class="fleaf fl3"></span>
+    <span class="fleaf fl4"></span><span class="fleaf fl5"></span><span class="fleaf fl6"></span>
+  </div>
+
+  <div class="container final-wrap">
+    <div class="final-title">
+      <div class="final-kicker">INTERNATIONAL CONFERENCE • SYDNEY, AUSTRALIA</div>
+      <h1>Sust<span>@inAI</span> <b>27</b></h1>
+      <h2>International Conference on<br>Sustainable Artificial Intelligence and Green Computing</h2>
+      <div class="theme-ribbon">AI AND GREEN COMPUTING</div>
+      <div class="final-meta">
+        <span>▣ &nbsp;<strong>20<sup>th</sup> April to 22<sup>nd</sup> April, 2027</strong></span>
+        <i></i>
+        <span>⌖ &nbsp;<strong>Sydney, Australia</strong></span>
+      </div>
+    </div>
+
+    <div class="final-info">
+      <div class="final-intro">
+        <div class="intro-logo-final">
+          <img src="assets/sustainai-at-logo.png" alt="Sust@inAI 27 leaf and circuit logo">
+        </div>
+        <div class="intro-text-final">
+          <div class="final-section-label">CONFERENCE INTRODUCTION</div>
+          <h3>Intelligence that works with the planet.</h3>
+          <p><strong>Sust@inAI 27</strong> is the International Conference on Sustainable Artificial Intelligence and Green Computing, bringing the AI and sustainable-computing communities together around one question: <strong>how do we advance artificial intelligence without accelerating its environmental cost?</strong></p>
+          <p>The conference welcomes work spanning energy-efficient AI systems, green computing infrastructure, and AI applied to environmental challenges — alongside the policy and reporting standards needed to make sustainability claims verifiable, taking place in Sydney from <strong>April 20–22, 2027.</strong></p>
+        </div>
+      </div>
+
+      <aside class="final-countdown">
+        <div class="count-label">◷ &nbsp; COUNTDOWN TO SUST@INAI 27</div>
+        <div class="final-count">
+          <div><b data-d>000</b><span>Days</span></div>
+          <div><b data-h>00</b><span>Hours</span></div>
+          <div><b data-m>00</b><span>Minutes</span></div>
+          <div><b data-s>00</b><span>Seconds</span></div>
+        </div>
+        <div class="final-orgs">
+          <img src="assets/iem-logo.png" alt="Institute of Engineering and Management">
+          <span></span>
+          <img src="assets/smart-society-logo.jpg" alt="SMART Society">
+        </div>
+      </aside>
+    </div>
+
+    <div class="final-actions">
+      <a class="final-tile green" href="tracks.html" onclick="sessionStorage.setItem('fromHome','tracks')">
+        <span class="tile-icon">▱</span><span><b>06</b><strong>Conference Tracks</strong><small>Explore the key focus areas</small></span><em>›</em>
+      </a>
+      <a class="final-tile blue" href="dates.html">
+        <span class="tile-icon">▣</span><span><b class="date-tile">20<sup>th</sup> April to 22<sup>nd</sup> April, 2027</b><strong>Conference Dates</strong><small>Mark your calendar</small></span><em>›</em>
+      </a>
+      <a class="final-tile cyan" href="registration.html">
+        <span class="tile-icon">✦</span><span><b class="date-tile">02 February, 2027</b><strong>Early Bird Registration</strong><small>Save your place early</small></span><em>›</em>
+      </a>
+    </div>
+
+    <div class="final-tagline"><span></span><b>LEAF + CIRCUIT</b><span></span><small>SUSTAINABLE INTELLIGENCE FOR A BRIGHTER TOMORROW</small></div>
+  </div>
+</section>
+</main><footer class="footer"><div class="container footer-grid"><div><strong>Sust@inAI 27</strong><div class="small">International Conference on Sustainable Artificial Intelligence and Green Computing</div></div><div class="small">20–22 April 2027 • Sydney, Australia • Institute of Engineering & Management</div></div></footer><div id="modal" class="modal" onclick="if(event.target===this)closeModal()"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><h3 id="modalTitle"></h3><p id="modalText"></p><div class="hint">Move your cursor over interactive cards or tap them for a quick overview.</div></div></div><script src="assets/site.js"></script></body></html>
