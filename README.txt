@@ -7,7 +7,7 @@ Changes in this version:
 - Removed the previous "At a glance" and lower homepage information blocks.
 - Added stronger animation to the supplied background: slow artwork drift, luminous circuit traces, floating glowing leaves, animated light field and shimmer.
 - Premium animated Sust@inAI logo retained.
-- The "Days" interactive popup now says: "20th April to 22nd April, 2027".
+- The "Days" interactive popup now says: "18th May to 20th May, 2027".
 - Separate tabs/pages remain in place.
 - Other page content remains unchanged for now.
 

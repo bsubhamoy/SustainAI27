@@ -2,7 +2,7 @@
 
 International Conference on Sustainable Artificial Intelligence and Green Computing.
 
-- **Conference:** 20–22 April 2027
+- **Conference:** 18–20 May 2027
 - **Venue:** Sydney, Australia
 - **Organizer:** Institute of Engineering & Management
 
